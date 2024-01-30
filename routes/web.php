@@ -24,6 +24,7 @@ Route::get('/dbcon', function () {
 Route::controller(authController::class)->group(function (){
     Route::get('register','register')->name('register');
 });
+Route::post('/register',[authController::class,'registerPost'])->name('register');
 Route::controller(authController::class)->group(function (){
     Route::get('signin','signin')->name('signin');
 });

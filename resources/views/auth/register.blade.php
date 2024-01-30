@@ -18,28 +18,35 @@
 	</head>
 
 	<body>
+		@if(Session::has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ Session::get('success') }}
+        </div>
+@endif
 
 		<div class="wrapper" style="background-image: url('{{asset('admin/images/bg-registration-form-2.jpg')}}');">
 			<div class="inner">
-				<form action="">
+
+				<form action="{{route('register')}}" method="POST">
+					@csrf
 					<h3>Registration Form</h3>
 					<div class="form-group">
 						<div class="form-wrapper">
 							<label for="">First Name</label>
-							<input type="text" class="form-control">
+							<input type="text" name="First_Name" class="form-control">
 						</div>
 						<div class="form-wrapper">
 							<label for="">Last Name</label>
-							<input type="text" class="form-control">
+							<input type="text" name="Last_Name" class="form-control">
 						</div>
 					</div>
 					<div class="form-wrapper">
 						<label for="">Email</label>
-						<input type="text" class="form-control">
+						<input type="email" name="email" class="form-control">
 					</div>
 					<div class="form-wrapper">
 						<label for="">Password</label>
-						<input type="password" class="form-control">
+						<input type="password" name="password" class="form-control">
 					</div>
 
 					<div class="checkbox">
