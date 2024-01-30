@@ -22,11 +22,8 @@
 				<p class="text-2">Privaci policy & Term of service</p>
 			</div>
 			<form class="form-detail " action="#" method="post" id="myform">
-                <div clas>
-				<div class="form-row">
-					<label for="username">USERNAME</label>
-					<input type="text" name="username" id="username" class="input-text">
-				</div>
+                <div class="justify-content-center align-items-center">
+
 				<div class="form-row">
 					<label for="your_email">E-MAIL</label>
 					<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
