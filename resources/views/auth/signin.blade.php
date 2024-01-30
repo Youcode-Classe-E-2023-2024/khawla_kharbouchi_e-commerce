@@ -14,6 +14,8 @@
 
 	<body>
 
+		
+
 		<div class="wrapper" style="background-image: url('{{asset('admin/images/bg-registration-form-2.jpg')}}');">
 			<div class="inner">
 				<form action="">

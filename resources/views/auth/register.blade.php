@@ -10,6 +10,11 @@
 		
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
+		<style>
+			body{
+				cursor: url("image.png"), auto;
+			}
+		</style>
 	</head>
 
 	<body>
