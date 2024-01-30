@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::controller(authController::class)->group(function (){
     Route::get('register','register')->name('register');
 });
+Route::controller(authController::class)->group(function (){
+    Route::get('signin','signin')->name('signin');
+});
