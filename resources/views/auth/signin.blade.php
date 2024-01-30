@@ -7,7 +7,6 @@
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
 		<link rel="stylesheet" href="{{asset('admin/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
-		
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
 	</head>
@@ -18,18 +17,18 @@
 
 		<div class="wrapper" style="background-image: url('{{asset('admin/images/bg-registration-form-2.jpg')}}');">
 			<div class="inner">
-				<form action="">
-					<h3>Registration Form</h3>
+				<form action="{{route('signin')}}" method="POST">
+					<h3>Login</h3>
 					<div class="form-group">
 
 					</div>
 					<div class="form-wrapper">
 						<label for="">Email</label>
-						<input type="text" class="form-control">
+						<input type="email" name="email" class="form-control">
 					</div>
 					<div class="form-wrapper">
 						<label for="">Password</label>
-						<input type="password" class="form-control">
+						<input type="password" name="password" class="form-control">
 					</div>
 
 					<div class="checkbox">
@@ -44,5 +43,5 @@
 			</div>
 		</div>
 		
-	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+	</body>
 </html>
