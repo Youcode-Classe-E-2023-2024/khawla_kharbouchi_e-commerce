@@ -12,12 +12,17 @@
 	</head>
 
 	<body>
-
+@if(Session::has('erreur'))
+<div class="alert alert-danger" role="alert">
+	{{Session::get('erreur')}}
+</div>
+@endif
 		
 
 		<div class="wrapper" style="background-image: url('{{asset('admin/images/bg-registration-form-2.jpg')}}');">
 			<div class="inner">
 				<form action="{{route('signin')}}" method="POST">
+					@csrf
 					<h3>Login</h3>
 					<div class="form-group">
 
