@@ -17,6 +17,10 @@ use App\Http\Controllers\proController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dbcon', function () {
+    return view('dbcon');
+});
+
 Route::controller(authController::class)->group(function (){
     Route::get('register','register')->name('register');
 });
