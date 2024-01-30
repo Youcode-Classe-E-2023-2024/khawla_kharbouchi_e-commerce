@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\proController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +22,7 @@ Route::controller(authController::class)->group(function (){
 });
 Route::controller(authController::class)->group(function (){
     Route::get('signin','signin')->name('signin');
+});
+Route::controller(proController::class)->group(function (){
+    Route::get('product','product')->name('product');
 });
