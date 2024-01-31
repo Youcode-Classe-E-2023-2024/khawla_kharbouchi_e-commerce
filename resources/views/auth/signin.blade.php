@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
-		<link rel="stylesheet" href="{{asset('admin/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
+		<link rel="stylesheet" href="{{asset('user/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
 		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="{{asset('admin/css/style.css')}}">
+		<link rel="stylesheet" href="{{asset('user/css/style.css')}}">
 	</head>
 
 	<body>
@@ -19,7 +19,7 @@
 @endif
 		
 
-		<div class="wrapper" style="background-image: url('{{asset('admin/images/bg-registration-form-2.jpg')}}');">
+		<div class="wrapper" style="background-image: url('{{asset('user/images/bg-registration-form-2.jpg')}}');">
 			<div class="inner">
 				<form action="{{route('signin')}}" method="POST">
 					@csrf
