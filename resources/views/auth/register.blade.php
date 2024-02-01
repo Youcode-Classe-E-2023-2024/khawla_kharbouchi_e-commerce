@@ -4,11 +4,7 @@
 		<meta charset="utf-8">
 		<title>Register</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- MATERIAL DESIGN ICONIC FONT -->
 		<link rel="stylesheet" href="{{asset('user/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css')}}">
-		
-		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="{{asset('user/css/style.css')}}">
 		<style>
 			body{
