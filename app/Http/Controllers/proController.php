@@ -21,6 +21,7 @@ class proController extends Controller
         'description' => 'nullable|string',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
     ]);
+
     $product = new Product();
     $product->name = $request->name;
     $product->price = $request->price;
@@ -29,11 +30,14 @@ class proController extends Controller
     if ($request->hasFile('image')) {
         $file = $request->file('image');
         $filename = time() . '.' . $file->getClientOriginalExtension();
-        $file->storeAs('public/images', $filename);
-
+        $path = $file->storeAs('public/images', $filename);
+        $product->image = $path;
     }
+
     $product->save();
+
     return back()->with('success', 'Product ajouté avec succès');
 }
+
 
 }

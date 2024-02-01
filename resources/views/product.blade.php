@@ -51,6 +51,11 @@
                   <dialog id="my_modal_1" class="modal rounded-lg">
                     <div class="modal-box h-auto w-96 flex flex-col items-center justify-center p-6  rounded-lg">
                         <h3 class="font-bold text-lg italic text-center">Add Your Product</h3>
+                        @if(Session::has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ Session::get('success') }}
+                        </div>
+                @endif
                         <form action="{{ route('product') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="w-72 mt-5">
@@ -88,7 +93,7 @@
                                 </div>
                             </div>
                             <div class="mt-5 justify-between">
-                                <button type="submit" class="btn btn-save group flex h-min ring-none items-center justify-center hover:opacity-95 disabled:opacity-50 rounded-lg py-2 px-4 font-dm focus:outline-none !ring-transparent text-violet-800 border border-black border-b-black border-b-4 hover:border active:border bg-white hover:text-black hover:bg-gray-50 active:bg-gray-100 active:text-black focus-visible:outline-violet-600 focus-visible:ring-violet-700 text-sm sm:text-base">Save</button>
+                                <button  type="submit" class="btn btn-save group flex h-min ring-none items-center justify-center hover:opacity-95 disabled:opacity-50 rounded-lg py-2 px-4 font-dm focus:outline-none !ring-transparent text-violet-800 border border-black border-b-black border-b-4 hover:border active:border bg-white hover:text-black hover:bg-gray-50 active:bg-gray-100 active:text-black focus-visible:outline-violet-600 focus-visible:ring-violet-700 text-sm sm:text-base">Save</button>
                             </div>
                         </form>
                     </div>
