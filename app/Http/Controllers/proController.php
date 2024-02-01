@@ -43,5 +43,16 @@ public function showProducts()
     $products = Product::all(); 
     return view('product', compact('products')); 
 }
-
+public function remove($id)
+{
+    $product = Product::find($id);
+    
+    // Supprimer l'image du système de fichiers si nécessaire
+    if ($product->image) {
+        Storage::delete($product->image);
+    }
+    
+    $product->delete();
+    return redirect()->route('products')->with('status', "Product Deleted Successfully");
+}
 }
