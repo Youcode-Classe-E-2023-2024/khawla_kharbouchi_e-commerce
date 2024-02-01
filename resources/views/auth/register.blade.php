@@ -47,8 +47,8 @@
 
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> I caccept the Terms of Use & Privacy Policy.
-							<span class="checkmark"></span>
+							<a href="signin"> I have Account</a>
+							
 						</label>
 					</div>
 					<button>Register Now</button>
