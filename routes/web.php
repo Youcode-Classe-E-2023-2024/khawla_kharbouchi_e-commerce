@@ -35,3 +35,4 @@ Route::controller(proController::class)->group(function (){
     Route::get('product','product')->name('product');
 });
 Route::post('/product',[proController::class,'productPost'])->name('product');
+Route::get('/product', [ProController::class, 'showProducts'])->name('products');

@@ -38,6 +38,10 @@ class proController extends Controller
 
     return back()->with('success', 'Product ajouté avec succès');
 }
-
+public function showProducts()
+{
+    $products = Product::all(); 
+    return view('product', compact('products')); 
+}
 
 }
