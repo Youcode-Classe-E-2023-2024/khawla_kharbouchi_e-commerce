@@ -6,7 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        .modal-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
+    </style>
     <title>shop</title>
 </head>
 <body>
@@ -46,11 +60,40 @@
                 </div>
                 <div class="flex items-center gap-x-1">
                     <button
-                    class="hidden select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-                    type="button">
+                    class=" btn btn-primary select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                    type="button"  onclick="my_modal_1.showModal()" href="#" id="modals">
                     <span>add product</span>
                   </button>
-
+                  <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg italic text-center">Add Your Product</h3>
+                        <form>
+                            <div class="relative mt-5">
+                                <input type="file" id="productImage" class="input-field" placeholder="Product Image" />
+                                <label for="productImage" class="input-icon">
+                                    <!-- SVG for image icon -->
+                                </label>
+                            </div>
+                            <div class="relative mt-3">
+                                <input type="text" id="title" class="input-field" placeholder="Title" />
+                                <label for="title" class="input-icon">
+                                    <!-- SVG for title icon -->
+                                </label>
+                            </div>
+                            <div class="relative mt-3">
+                                <input type="text" id="price" class="input-field" placeholder="Price" />
+                                <label for="price" class="input-icon">
+                                    <!-- SVG for price icon -->
+                                </label>
+                            </div>
+                            <div class="flex mt-5 justify-between">
+                                <button type="submit" class="btn btn-save">Save</button>
+                                <button type="button" class="btn btn-plus" onclick="clickplproduct()">Plus</button>
+                            </div>
+                        </form>
+                    </div>
+                </dialog>
+                
                 </div>
                 <button
                   class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
