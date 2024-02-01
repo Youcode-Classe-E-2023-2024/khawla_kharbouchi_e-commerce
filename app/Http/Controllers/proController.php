@@ -11,7 +11,9 @@ class proController extends Controller
     {
         return view('product');
     }
+    public function productPost(Request $request)
+{
 
 }
 
-
+}

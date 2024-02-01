@@ -51,7 +51,8 @@
                   <dialog id="my_modal_1" class="modal rounded-lg">
                     <div class="modal-box h-auto w-96 flex flex-col items-center justify-center p-6  rounded-lg">
                         <h3 class="font-bold text-lg italic text-center">Add Your Product</h3>
-                        <form>
+                        <form action="{{ route('product') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="w-72 mt-5">
                                 <div class="relative w-full min-w-[200px] h-10">
                                   <input

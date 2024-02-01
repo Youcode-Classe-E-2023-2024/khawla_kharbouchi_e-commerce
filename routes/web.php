@@ -34,3 +34,4 @@ Route::post('/signin',[authController::class,'signinPost'])->name('signin');
 Route::controller(proController::class)->group(function (){
     Route::get('product','product')->name('product');
 });
+Route::post('/product',[proController::class,'productPost'])->name('product');
