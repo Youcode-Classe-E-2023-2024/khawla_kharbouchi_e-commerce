@@ -15,7 +15,7 @@
             <div class="flex items-center justify-between text-black">
               <a href="#"
                 class="mr-4 block cursor-pointer py-1.5 font-sans text-base font-medium leading-relaxed text-inherit antialiased">
-                Material Tailwind
+                khawla
               </a>
               <div class="flex items-center gap-4">
                 <div class="hidden mr-4 lg:block">
@@ -143,14 +143,26 @@
                                     <path
                                         d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                                 </svg></button>
-                                <dialog id="modal_{{ $product->id }}" class="modal">
-                                    <div class="modal-box w-11/12 max-w-5xl">
-                                      <h3 class="font-bold text-lg">Hello!</h3>
-                                      <p class="py-4">Click the button below to close</p>
-                                      <div class="modal-action">
+                                <dialog id="modal_{{ $product->id }}" class="modal rounded-lg w-2/4 h-3/5 border border-black ">
+                                    
+                                    <div class="modal-box text-center">
+                                <div class="d-flex flex-col items-center justify-center space-y-4">
+                                    <h1 class="italic text-xl font-bold mt-4 mb-4">{{ $product->name }}</h1>
+                                    <img src="{{ Storage::url($product->image) }}" alt="image" class="w-5/6 h-48 mx-auto mt-10 rounded-lg"/>
+                                    <h3 class="font-semibold italic">${{ $product->price }}</h3>
+                                    <p>{{$product->description}}</p>
+                                </div>
+                                      <div class="modal-action mb-10 mt-10">
                                         <form method="dialog">
-                                          <!-- if there is a button, it will close the modal -->
-                                          <button class="btn">Close</button>
+                                            <button href="#_" class="btn relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+                                                <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+                                                <span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+                                                <span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+                                                <span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+                                                <span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+                                                <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Close</span>
+                                                </button>
+                                          
                                         </form>
                                       </div>
                                     </div>
