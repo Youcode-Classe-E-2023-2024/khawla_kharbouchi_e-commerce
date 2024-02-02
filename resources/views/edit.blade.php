@@ -115,7 +115,7 @@
           </nav>
 <div class="container mx-auto mt-10 items-center justify-center text-center flex flex-col border-black">
     
-    <form action="{{ route('update.product', $product->id) }}" method="POST" enctype="multipart/form-data" class="border border-black rounded-lg">
+    <form action="{{ route('update.product', $product->id) }}" method="POST" enctype="multipart/form-data" class="border border-black rounded-lg w-5/6">
         @csrf
         @method('PUT')
         <h1 class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
@@ -127,21 +127,21 @@
             <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Edit Product</span></h1>
         <div class="mt-5 mb-5">
             <label for="name" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Name:</label>
-            <input type="text" name="name" value="{{ $product->name }}" class="h-10 w-96 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
+            <input type="text" name="name" value="{{ $product->name }}" class="border border-black h-10 w-4/5 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
         </div>
         <div class="mt-5 mb-5">
             <label for="price" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Price:</label>
-            <input type="number" name="price" value="{{ $product->price }}" class="h-10 w-96 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
+            <input type="number" name="price" value="{{ $product->price }}" class="border border-black h-10 w-4/5 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
         </div>
         <div class="mt-5 mb-5">
             <label for="description" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Description:</label>
-            <textarea name="description" class=" h-48 w-96 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">{{ $product->description }}</textarea>
+            <textarea name="description" class=" border border-black h-48 w-4/5 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">{{ $product->description }}</textarea>
         </div>
         <div class="mt-5 mb-5">
             <label for="image" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Product Image:</label>
-            <input type="file" name="image" class="h-10 w-96 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
+            <input type="file" name="image" class=" border border-black h-10 w-4/5 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
             @if($product->image)
-                <img src="{{ Storage::url($product->image) }}" width="100">
+                <img src="{{ Storage::url($product->image) }}" class="rounded-lg border border-black ml-32 mt-5">
             @endif
         </div>
         <div class="mt-10 mb-5">
