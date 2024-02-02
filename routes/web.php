@@ -37,4 +37,5 @@ Route::controller(proController::class)->group(function (){
 Route::post('/product',[proController::class,'productPost'])->name('product');
 Route::get('/product', [ProController::class, 'showProducts'])->name('products');
 Route::post('product/{id}', [proController::class, 'remove'])->name('remove.product');
+Route::get('/product/edit/{id}', [proController::class, 'edit'])->name('edit.product');
 

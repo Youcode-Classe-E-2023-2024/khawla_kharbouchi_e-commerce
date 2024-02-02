@@ -46,8 +46,6 @@ public function showProducts()
 public function remove($id)
 {
     $product = Product::find($id);
-    
-    // Supprimer l'image du système de fichiers si nécessaire
     if ($product->image) {
         Storage::delete($product->image);
     }

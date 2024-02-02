@@ -123,14 +123,19 @@
             @foreach ($products as $product)
             <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                 <a href="#">
-
                     <img src="{{ Storage::url($product->image) }}"
                             alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
                     <div class="px-4 py-3 w-72">
+                        
                         <form action="{{ route('remove.product', $product->id) }}" method="POST">
                             @csrf
                             @method('POST')
                             <button type="submit" class="border-black ml-4 mr-4">Delete</button>
+                        </form>
+                        <form action="{{ route('remove.product', $product->id) }}" method="POST">
+                            @csrf
+                            @method('POST')
+                            <button type="submit" class="border-black ml-4 mr-4">edit</button>
                         </form>
                         <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
                         <p class="text-lg font-bold text-black truncate block capitalize">{{ $product->name }}</p>
