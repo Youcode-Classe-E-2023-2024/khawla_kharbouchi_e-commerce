@@ -132,11 +132,8 @@
                             @method('POST')
                             <button type="submit" class="border-black ml-4 mr-4">Delete</button>
                         </form>
-                        <form action="{{ route('remove.product', $product->id) }}" method="POST">
-                            @csrf
-                            @method('POST')
-                            <button type="submit" class="border-black ml-4 mr-4">edit</button>
-                        </form>
+                            <a href="{{ route('edit.product', $product->id) }}"><button type="submit" class="border-black ml-4 mr-4">edit</button></a>
+                        
                         <span class="text-gray-400 mr-3 uppercase text-xs">Brand</span>
                         <p class="text-lg font-bold text-black truncate block capitalize">{{ $product->name }}</p>
                         <div class="flex items-center">
