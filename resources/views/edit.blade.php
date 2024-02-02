@@ -126,16 +126,16 @@
             <span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
             <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Edit Product</span></h1>
         <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name" value="{{ $product->name }}" required>
+            <label for="name" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Name:</label>
+            <input type="text" name="name" value="{{ $product->name }}" class="peer h-10 w-80 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
         </div>
         <div>
-            <label for="price">Price:</label>
-            <input type="number" name="price" value="{{ $product->price }}" required>
+            <label for="price" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Price:</label>
+            <input type="number" name="price" value="{{ $product->price }}" class="peer h-10 w-80 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" required>
         </div>
         <div>
-            <label for="description">Description:</label>
-            <textarea name="description">{{ $product->description }}</textarea>
+            <label for="description" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Description:</label>
+            <textarea name="description" class="peer h-10 w-80 rounded-md bg-gray-50 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">{{ $product->description }}</textarea>
         </div>
         <div>
             <label for="image">Product Image:</label>
